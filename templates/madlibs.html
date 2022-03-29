@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block form %} 
+    <form action="/result">
+        
+        {% for story in stories%}
+            <label for="{{story}}">{{story}}</label>
+            <input type="text" name="{{story}}">
+        {%endfor%}
+        <button type="submit">Get Madlib!</button>
+    </form>
+{% endblock%}
